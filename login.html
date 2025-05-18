@@ -8,27 +8,29 @@
 </head>
 <body>
     <div class="principal">
-        <div class="principalTitle">
-            <h3>Login do Usuário</h3>
+        <div class="principalTitle bg-secondary text-white p-2 rounded border border-light">
+            <h3 class="m-0 fs-3">Login do Usuário</h3>
         </div>
-        <div class="formularioLogin">
-
-            <div>
-                E-mail
-                <input type="text">
+    
+        <div class="formularioLogin mt-3">
+    
+            <div class="mb-3">
+                <label for="email" class="form-label text-white">E-mail</label>
+                <input type="email" class="form-control bg-dark text-white border border-light" id="email">
             </div>
-
-            <div>
-                Senha
-                <input type="text">
+    
+            <div class="mb-3">
+                <label for="senha" class="form-label text-white">Senha</label>
+                <input type="password" class="form-control bg-dark text-white border border-light" id="senha">
             </div>
-
-
+    
         </div>
-        <div class="buttonsClass">
-            <button>Entrar</button>
-            <button>Não possuo cadastro</button>    
+    
+        <div class="buttonsClass d-flex flex-column gap-2 mb-3">
+            <button id="entrarButton" class="btn btn-outline-light">Entrar</button>
+            <button id="cadastroButton" class="btn btn-outline-light" onclick="window.location.href='cadastro.html'">Não possuo cadastro</button>
         </div>
     </div>
+    
 </body>
 </html>
