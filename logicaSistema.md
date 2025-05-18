@@ -4,10 +4,10 @@
 ├── dashboard.php (área restrita)
 ├── logout.php
 ├── js/
-│ └── validacao.js
+│ └── validacao.js 
 ├── css/
 │ └── estilo.css
-├── php/
+├── php/ (parte de banco de dados)
 │ ├── cadastrar_usuario.php
 │ ├── login.php
 │ ├── buscar_usuarios.php

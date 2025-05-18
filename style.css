@@ -42,7 +42,7 @@ body {
         font-size: 35px;
 
 
-        h3 {
+        h3, h4 {
             border: 0px;
             margin: 0px;
         }
@@ -104,5 +104,30 @@ body {
 
 
     }
+
+@media (max-width: 600px) {
+    .principal {
+        width: 95%;
+        height: auto;
+        padding: 10px;
+    }
+
+    .formularioLogin input,
+    .buttonsClass button {
+        width: 100%;
+        height: 40px;
+        font-size: 1rem;
+    }
+
+    .principalTitle h3 {
+        font-size: 1.5rem;
+    }
+
+    .listaUsuarios ul {
+        padding-left: 10px;
+        font-size: 0.9rem;
+    }
+}
+
 
 }

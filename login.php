@@ -15,6 +15,8 @@ if (isset($_SESSION['erro_login'])) {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login de usuário</title>
     <link rel="stylesheet" href="style.css">
+    <script src="js/validacao.js"></script>
+
 </head>
 <body>
     <?php if ($erro): ?>
