@@ -1,5 +1,4 @@
 <?php
-session_start(); // importante para usar $_SESSION
 include('conexao.php');
 
 if ($_SERVER["REQUEST_METHOD"] === "POST") {
@@ -34,25 +33,20 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         if ($stmt) {
             $stmt->bind_param("sss", $nome, $email, $senha_hash);
             if ($stmt->execute()) {
+                // Exibe a mensagem na própria tela, sem redirecionar
                 $_SESSION['mensagem_sucesso'] = "Usuário cadastrado com sucesso!";
                 $stmt->close();
-                header("Location: /provaWebII/login.php");
-                exit;
+                // Não faz redirecionamento nem exit
             } else {
                 $_SESSION['mensagem_erro'] = "Erro ao cadastrar o usuário.";
-               header("Location: /provaWebII/cadastro.php");
-               exit;
-
+        
             }
         } else {
             $_SESSION['mensagem_erro'] = "Erro na preparação da query.";
-            header("Location: /provaWebII/cadastro.php");
-            exit;
         }
     } else {
         $_SESSION['mensagem_erro'] = "Por favor, preencha todos os campos.";
-        header("Location: /provaWebII/cadastro.php");
-        exit;
+
     }
 }
 
