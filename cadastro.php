@@ -1,5 +1,6 @@
 <?php
 session_start();
+include 'php/cadastrar_usuario.php';
 if (isset($_SESSION['mensagem_erro'])) {
     echo "<div style='color: red; background: #fdd; padding: 10px; border: 1px solid red; margin-bottom: 15px;'>"
         . htmlspecialchars($_SESSION['mensagem_erro']) . "</div>";
@@ -30,7 +31,7 @@ if (isset($_SESSION['mensagem_sucesso'])) {
         </div>
 
         <!-- FORM COMEÇA AQUI -->
-        <form action="php/cadastrar_usuario.php" method="POST" class="formularioLogin mt-3 justify-content-center">
+        <form action="" method="POST" class="formularioLogin mt-3 justify-content-center">
 
             <div class="mb-3">
                 <label for="nome" class="form-label text-white">Nome</label>
